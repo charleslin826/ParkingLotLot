@@ -18,14 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ral-cG-xy8">
-                                <rect key="frame" x="0.0" y="60" width="375" height="56"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="barTintColor" red="0.76551419499999995" green="0.2160254717" blue="0.2194854617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2z8-QN-Jap">
-                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reuseCell" rowHeight="59" id="WHY-zP-rlu">
@@ -79,19 +73,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ral-cG-xy8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="1xf-rd-cTU"/>
-                            <constraint firstItem="Ral-cG-xy8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Ok-JR-l2W"/>
-                            <constraint firstItem="Ral-cG-xy8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KBq-ZI-7lX"/>
                             <constraint firstItem="2z8-QN-Jap" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OzP-rk-MOc"/>
                             <constraint firstItem="2z8-QN-Jap" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="We5-rK-y3G"/>
+                            <constraint firstItem="2z8-QN-Jap" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="azN-3W-UsZ"/>
                             <constraint firstItem="2z8-QN-Jap" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="c5x-pg-d6N"/>
-                            <constraint firstItem="2z8-QN-Jap" firstAttribute="top" secondItem="Ral-cG-xy8" secondAttribute="bottom" id="zKe-ee-DdP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="nCf-6n-sVf"/>
                     <connections>
-                        <outlet property="countrySearch" destination="Ral-cG-xy8" id="Lni-Vc-kvB"/>
                         <outlet property="tblView" destination="2z8-QN-Jap" id="0Aw-7I-tH9"/>
                     </connections>
                 </viewController>

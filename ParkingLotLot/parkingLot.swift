@@ -9,7 +9,7 @@
 import Foundation
 
 
-
+//板橋區
 struct parkingLot {
     var area = ""
     var time = ""
