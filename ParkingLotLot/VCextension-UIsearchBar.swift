@@ -53,16 +53,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You selected cell #\(indexPath.row)!")
         if (searchController.isActive) {
-            print("你選擇的是 \(searchArrDict[indexPath.row])")
+             valueToPass[0] = searchArrDict[indexPath.row].name
+             valueToPass[1] = searchArrDict[indexPath.row].area
+             valueToPass[2] = searchArrDict[indexPath.row].time
+             valueToPass[3] = searchArrDict[indexPath.row].address
+                print("你選擇的是 \(searchArrDict[indexPath.row])")
+        }else{
+            valueToPass[0] = (dataSource[indexPath.row].area)
+            valueToPass[1] = (dataSource[indexPath.row].name)
+            valueToPass[2] = (dataSource[indexPath.row].time)
+            valueToPass[3] = (dataSource[indexPath.row].address)
         }
-        order += 1
-        print("didSelectRowAt \(order)")
-        
-        valueToPass[0] = (dataSource[indexPath.row].area)
-        valueToPass[1] = (dataSource[indexPath.row].name)
-        valueToPass[2] = (dataSource[indexPath.row].time)
-        valueToPass[3] = (dataSource[indexPath.row].address)
-        //        print(valueToPass)
     }
     
     
@@ -80,109 +81,7 @@ extension ViewController: UISearchResultsUpdating {
         searchArrDict = dataSource.filter{ ($0.area.contains(searchText)) }
         print("searchArrDict = \(searchArrDict)")
         
-        
-        
-        
-        
-//        searchArr = cities.filter { (city) -> Bool in
-//            return city.contains(searchText)
-//        }
-//        print(searchArr)
+
     }
 }
-//
-//extension ViewController: UISearchBarDelegate {
-//
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        order += 1
-//        print("searchBar \(order)")
-//        searching = true
-//          searchArr = cities.filter(
-//            {
-//                $0.prefix(searchText.count) == searchText
-//            }
-//        )
-//
-//
-//
-//    }
-//
-//
-//
-//}
-
-
-
-
-//extension ViewController: UITableViewDataSource {
-//    func tableView(tableView: UITableView,
-//                   numberOfRowsInSection section: Int) -> Int {
-//        if (self.searchController.active) {
-//            return self.searchArr.count
-//        } else {
-//            return self.cities.count
-//        }
-//    }
-//
-//    func tableView(tableView: UITableView,
-//                   cellForRowAtIndexPath indexPath: NSIndexPath)
-//        -> UITableViewCell {
-//            let cell =
-//                tableView.dequeueReusableCellWithIdentifier(
-//                    "Cell", forIndexPath: indexPath)
-//
-//            if (self.searchController.active) {
-//                cell.textLabel?.text =
-//                    self.searchArr[indexPath.row]
-//                return cell
-//            } else {
-//                cell.textLabel?.text =
-//                    self.cities[indexPath.row]
-//                return cell
-//            }
-//    }
-//}
-//
-//extension ViewController: UITableViewDelegate {
-//    func tableView(tableView: UITableView,
-//                   didSelectRowAtIndexPath indexPath: NSIndexPath){
-//        tableView.deselectRowAtIndexPath(
-//            indexPath, animated: true)
-//        if (self.searchController.active) {
-//            print(
-//                "你選擇的是 \(self.searchArr[indexPath.row])")
-//        } else {
-//            print(
-//                "你選擇的是 \(self.cities[indexPath.row])")
-//        }
-//    }
-//}
-
-//extension ViewController: UISearchResultsUpdating {
-//    func updateSearchResults(for searchController: UISearchController) {
-//
-//    }
-//
-//    func updateSearchResultsForSearchController(searchController: UISearchController){
-//        // 取得搜尋文字
-//        guard let searchText =
-//            searchController.searchBar.text else {
-//                return
-//        }
-//
-//        // 使用陣列的 filter() 方法篩選資料
-//        self.searchArr = self.cities.filter(
-//            { (city) -> Bool in
-//                // 將文字轉成 NSString 型別
-//                let cityText:NSString = city
-//
-//                // 比對這筆資訊有沒有包含要搜尋的文字
-//                return (cityText.rangeOfString(
-//                    searchText, options:
-//                    NSStringCompareOptions.CaseInsensitiveSearch).location)
-//                    != NSNotFound
-//        })
-//    }
-//}
-
 

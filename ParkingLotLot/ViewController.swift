@@ -62,10 +62,10 @@ class ViewController: UIViewController {
         self.searchController.searchResultsUpdater = self
         
         // 搜尋時是否隱藏 NavigationBar
-        self.searchController.hidesNavigationBarDuringPresentation = true
+        self.searchController.hidesNavigationBarDuringPresentation = false
         
         // 搜尋時是否使用燈箱效果 (會將畫面變暗以集中搜尋焦點)
-        self.searchController.dimsBackgroundDuringPresentation = true
+        self.searchController.dimsBackgroundDuringPresentation = false
         
         // 搜尋框的樣式
         self.searchController.searchBar.searchBarStyle = .prominent
