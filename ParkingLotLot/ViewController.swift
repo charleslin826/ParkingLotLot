@@ -105,13 +105,7 @@ class ViewController: UIViewController {
                     guard let objectObj = dictionary["result"] as? [String: Any] else {
                         throw FetchUserError.invalidObject
                     }
-                    
-                    //                    guard let recordTotal = objectObj["total"] as? Int  else {
-                    //                        throw FetchUserError.missingTotal
-                    //                    }
-                    //                    print(recordTotal)
-                    
-                    
+    
                     if let recordArr = objectObj["records"] as? [[String: Any]] {
                         //                        dump(recordArr)
                         
@@ -127,12 +121,10 @@ class ViewController: UIViewController {
                             }
                             
                             if let Name = value["NAME"] as? String{
-                                //                                print(Area)
                                 lot.name = Name
                             }
                             
                             if let Address = value["ADDRESS"] as? String{
-                                //                                print(Area)
                                 lot.address = Address
                             }
                             self.dataSource.append(lot)

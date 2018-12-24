@@ -13,8 +13,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (searchController.isActive) {
-            print("searchController : \(searchController)")
-            return searchArrDict.count//searchArr.count
+            return searchArrDict.count
         } else {
             return dataSource.count
         }
@@ -31,17 +30,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let time = cell?.viewWithTag(3) as! UILabel
         let address = cell?.viewWithTag(4) as! UILabel
         if (searchController.isActive) {
-            order += 1
-            print("cellForRowAt & self.searchController.isActive \(order) \(searchArrDict)")
-            print("indexPath.row = \(indexPath.row)")
-            name.text = searchArrDict[indexPath.row].name//searchArr[indexPath.row]
+            name.text = searchArrDict[indexPath.row].name
             area.text = searchArrDict[indexPath.row].area
             time.text = searchArrDict[indexPath.row].time
             address.text = searchArrDict[indexPath.row].address
             print(searchArrDict[indexPath.row])
 
         } else {
-//            print("self.searchController.is ＮＯＴ Active => \(searchArrDict) indexPath.row = \(indexPath.row)")
             area.text = dataSource[indexPath.row].area
             name.text = dataSource[indexPath.row].name
             time.text = dataSource[indexPath.row].time
