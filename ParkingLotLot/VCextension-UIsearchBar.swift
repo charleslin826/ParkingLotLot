@@ -34,7 +34,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             area.text = searchArrDict[indexPath.row].area
             time.text = searchArrDict[indexPath.row].time
             address.text = searchArrDict[indexPath.row].address
-            print(searchArrDict[indexPath.row])
+//            print(searchArrDict[indexPath.row])
 
         } else {
             area.text = dataSource[indexPath.row].area
@@ -71,12 +71,7 @@ extension ViewController: UISearchResultsUpdating {
         guard let searchText = searchController.searchBar.text else {
             return
         }
-        
-        
-        searchArrDict = dataSource.filter{ ($0.area.contains(searchText)) }
-        print("searchArrDict = \(searchArrDict)")
-        
-
+        searchArrDict = dataSource.filter{ ($0.area.contains(searchText)||$0.name.contains(searchText)) }
     }
 }
 

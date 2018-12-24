@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     var dataSource = [parkingLot]()
     var searchArrDict = [parkingLot](){
         didSet {
-            print("searchArrDict _ self.tblView.reloadData() , searchArrDict=\(searchArrDict)")
+//            print("searchArrDict _ self.tblView.reloadData() , searchArrDict=\(searchArrDict)")
             self.tblView.reloadData()
         }
     }
