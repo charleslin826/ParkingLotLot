@@ -14,6 +14,7 @@
 		56317B6321C795F7000907D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56317B6121C795F7000907D2 /* LaunchScreen.storyboard */; };
 		56317B6B21C7962C000907D2 /* parkingLot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56317B6A21C7962C000907D2 /* parkingLot.swift */; };
 		56317B6D21C79E98000907D2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56317B6C21C79E98000907D2 /* DetailViewController.swift */; };
+		5682D91421D071DD002BEC3F /* VCextension-UIsearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5682D91321D071DD002BEC3F /* VCextension-UIsearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		56317B6421C795F7000907D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56317B6A21C7962C000907D2 /* parkingLot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parkingLot.swift; sourceTree = "<group>"; };
 		56317B6C21C79E98000907D2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5682D91321D071DD002BEC3F /* VCextension-UIsearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCextension-UIsearchBar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				56317B5821C795F3000907D2 /* AppDelegate.swift */,
 				56317B5A21C795F3000907D2 /* ViewController.swift */,
+				5682D91321D071DD002BEC3F /* VCextension-UIsearchBar.swift */,
 				56317B6A21C7962C000907D2 /* parkingLot.swift */,
 				56317B5C21C795F3000907D2 /* Main.storyboard */,
 				56317B6C21C79E98000907D2 /* DetailViewController.swift */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56317B5B21C795F3000907D2 /* ViewController.swift in Sources */,
+				5682D91421D071DD002BEC3F /* VCextension-UIsearchBar.swift in Sources */,
 				56317B5921C795F3000907D2 /* AppDelegate.swift in Sources */,
 				56317B6B21C7962C000907D2 /* parkingLot.swift in Sources */,
 				56317B6D21C79E98000907D2 /* DetailViewController.swift in Sources */,

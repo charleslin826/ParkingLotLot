@@ -1,0 +1,133 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "新北市政府資料開放平台",
+    "version": "1.0.0",
+    "title": "NTPC Open Data"
+  },
+  "host": "data.ntpc.gov.tw",
+  "basePath": "/od/data/api",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/B1464EF0-9C7C-4A6F-ABF7-6BDF32847E68": {
+      "get": {
+        "summary": "新北市路外公共停車場資訊",
+        "produces": [
+          "application/json;charset=UTF-8"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "description": "",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "required": [
+                  "Id",
+                  "AREA",
+                  "TYPE",
+                  "SUMMARY",
+                  "ADDRESS",
+                  "TEL",
+                  "PAYEX",
+                  "TOTALCAR",
+                  "TOTALMOTOR",
+                  "TOTALBIKE",
+                  "SERVICETIME",
+                  "TW97X",
+                  "TW97Y"
+                ],
+                "properties": {
+                  "Id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "AREA": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "TYPE": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "SUMMARY": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "ADDRESS": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "TEL": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "PAYEX": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "TOTALCAR": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "TOTALMOTOR": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "TOTALBIKE": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "SERVICETIME": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "showLon": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "TW97X": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "TW97Y": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "$format",
+            "in": "query",
+            "type": "string",
+            "description": "資料格式json",
+            "required": true
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "type": "integer",
+            "description": "取得資料筆數(系統最多給予2000筆)",
+            "required": false
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "type": "integer",
+            "description": "跳過資料筆數",
+            "required": false
+          }
+        ]
+      }
+    }
+  }
+}
